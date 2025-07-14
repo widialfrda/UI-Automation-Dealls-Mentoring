@@ -1,4 +1,4 @@
-describe('Mentors of Karier are listed', () => {
+describe('Mentors are listed', () => {
   beforeEach(() => {
     cy.viewport(1920, 960);
     cy.fixture('userData').then((user) => {
@@ -13,5 +13,6 @@ describe('Mentors of Karier are listed', () => {
     cy.scrollTo('bottom');
     cy.wait(3000);
     cy.scrollTo('top');
+    cy.xpath('(//a[contains(text(), "Akademik")])').click();
   });
 });
